@@ -21,11 +21,6 @@ namespace Snippets.AsyncBasics
         }
     }
 
-    public interface ISomeService
-    {
-        Task<int> ExecuteAsync();
-    }
-
     // Create a fake service that returns fixed results after a delay
     public class FakeService : ISomeService
     {
@@ -33,16 +28,6 @@ namespace Snippets.AsyncBasics
         {
             // Succeeds asynchronously by returning the given result after 1 second
             return TestHelpers.DelayResult(42, TimeSpan.FromSeconds(1));
-        }
-    }
-
-    public class TestHelpers
-    {
-        // From recipe 2.1
-        public static async Task<T> DelayResult<T>(T result, TimeSpan delay)
-        {
-            await Task.Delay(delay);
-            return result;
         }
     }
 }
