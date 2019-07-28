@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippets.AsyncBasics", "Snippets.AsyncBasics\Snippets.AsyncBasics.csproj", "{0A9C4670-E825-47E0-BD1F-8E6B038DF2A1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippets.AsyncBasics.Wpf", "Snippets.AsyncBasics.Wpf\Snippets.AsyncBasics.Wpf.csproj", "{21354BEC-4720-4070-928A-17C2490A59B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0A9C4670-E825-47E0-BD1F-8E6B038DF2A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A9C4670-E825-47E0-BD1F-8E6B038DF2A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A9C4670-E825-47E0-BD1F-8E6B038DF2A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21354BEC-4720-4070-928A-17C2490A59B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21354BEC-4720-4070-928A-17C2490A59B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21354BEC-4720-4070-928A-17C2490A59B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21354BEC-4720-4070-928A-17C2490A59B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
