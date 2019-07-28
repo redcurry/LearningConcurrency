@@ -65,6 +65,7 @@
     <Compile Include="TestRetry.cs" />
     <Compile Include="TestTimeout.cs" />
     <Compile Include="TestWhenAll.cs" />
+    <Compile Include="TestWhenAny.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
