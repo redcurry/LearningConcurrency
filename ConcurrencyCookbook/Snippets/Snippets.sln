@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippets.AsyncBasics", "Sni
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippets.AsyncBasics.Wpf", "Snippets.AsyncBasics.Wpf\Snippets.AsyncBasics.Wpf.csproj", "{21354BEC-4720-4070-928A-17C2490A59B0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippets.AsyncBasics.ConfigureAwait", "Snippets.AsyncBasics.ConfigureAwait\Snippets.AsyncBasics.ConfigureAwait.csproj", "{70A04BCF-0626-43BA-B7DC-9F3153CE60B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{21354BEC-4720-4070-928A-17C2490A59B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21354BEC-4720-4070-928A-17C2490A59B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21354BEC-4720-4070-928A-17C2490A59B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70A04BCF-0626-43BA-B7DC-9F3153CE60B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70A04BCF-0626-43BA-B7DC-9F3153CE60B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70A04BCF-0626-43BA-B7DC-9F3153CE60B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70A04BCF-0626-43BA-B7DC-9F3153CE60B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
