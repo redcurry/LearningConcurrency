@@ -16,11 +16,8 @@
             >
             Cancel
         </Button>
-        <ProgressBar
-            x:Name="ProgressBar"
-            Minimum="0"
-            Maximum="100"
-            Height="25"
+        <ItemsControl
+            x:Name="ProgressBars"
             />
     </StackPanel>
 </Window>
