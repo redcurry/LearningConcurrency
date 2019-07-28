@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
 using NUnit.Framework;
 
@@ -28,6 +29,11 @@ namespace Snippets.AsyncBasics
         {
             // Succeeds asynchronously by returning the given result after 1 second
             return TestHelpers.DelayResult(42, TimeSpan.FromSeconds(1));
+        }
+
+        public Task<int> ExecuteWithCancellationAsync(CancellationToken cancellationToken)
+        {
+            throw new NotImplementedException();
         }
     }
 }
