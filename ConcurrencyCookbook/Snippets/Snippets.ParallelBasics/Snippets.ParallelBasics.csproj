@@ -51,6 +51,7 @@
     <Compile Include="TestParallelForEach.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestParallelInvoke.cs" />
+    <Compile Include="TestPlinq.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
