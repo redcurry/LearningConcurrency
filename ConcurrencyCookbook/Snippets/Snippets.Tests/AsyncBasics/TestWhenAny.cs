@@ -3,7 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using NUnit.Framework;
 
-namespace Snippets.AsyncBasics
+namespace Snippets.Tests.AsyncBasics
 {
     [TestFixture]
     public class TestWhenAny

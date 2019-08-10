@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using NUnit.Framework;
 
-namespace Snippets.ParallelBasics
+namespace Snippets.Tests.ParallelBasics
 {
     [TestFixture]
     public class TestPlinq

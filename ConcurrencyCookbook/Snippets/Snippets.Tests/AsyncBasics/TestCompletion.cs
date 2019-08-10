@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using NSubstitute;
 using NUnit.Framework;
 
-namespace Snippets.AsyncBasics
+namespace Snippets.Tests.AsyncBasics
 {
     [TestFixture]
     public class TestCompletion

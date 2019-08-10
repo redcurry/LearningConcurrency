@@ -3,7 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using NUnit.Framework;
 
-namespace Snippets.ParallelBasics
+namespace Snippets.Tests.ParallelBasics
 {
     [TestFixture]
     public class TestParallelAggregate

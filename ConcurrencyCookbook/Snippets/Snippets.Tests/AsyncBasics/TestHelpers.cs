@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace Snippets.AsyncBasics
+namespace Snippets.Tests.AsyncBasics
 {
     public class TestHelpers
     {

@@ -3,7 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using NUnit.Framework;
 
-namespace Snippets.AsyncBasics
+namespace Snippets.Tests.AsyncBasics
 {
     [TestFixture]
     public class TestDelay

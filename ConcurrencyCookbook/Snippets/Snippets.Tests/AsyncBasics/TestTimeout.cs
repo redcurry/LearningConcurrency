@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using NSubstitute;
 using NUnit.Framework;
 
-namespace Snippets.AsyncBasics
+namespace Snippets.Tests.AsyncBasics
 {
     // Tests a helper method that simulates cancelling a task after a timeout.
     // This is useful when the service operation doesn't provide cancellation itself.
