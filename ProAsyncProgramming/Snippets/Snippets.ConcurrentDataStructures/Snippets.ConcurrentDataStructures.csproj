@@ -41,12 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConcurrentDictCvsRepository.cs" />
+    <Compile Include="ConcurrentQueueTest.cs" />
+    <Compile Include="DynamicLazyCsvRepository.cs" />
     <Compile Include="CvsRepositoryUsingLazyT.cs" />
     <Compile Include="CvsRepositoryLazyWithDoubleCheck.cs" />
     <Compile Include="CvsRepositoryLazyWithProxy.cs" />
     <Compile Include="CvsRepositoryLazyWithLock.cs" />
     <Compile Include="CvsRepositoryLazy.cs" />
     <Compile Include="CvsRepository.cs" />
+    <Compile Include="ParallelFileFinderWithBag.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
