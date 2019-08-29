@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
@@ -26,6 +27,14 @@ namespace Snippets.TimeWebServer
                 consumers[i] = Task.Run(() => Consumer(requestQueue));
 
             Console.WriteLine("Listening...");
+
+            // Instead of terminating with Console.ReadLine(),
+            // which terminates threads forcefully,
+            // wait for the producer and consumers to finish
+            producer.Wait();
+            Task.WaitAll(consumers);
+
+            // Use this here after producer/consumer threads have been shut down
             Console.ReadLine();
         }
 
@@ -33,7 +42,15 @@ namespace Snippets.TimeWebServer
         {
             // listener.GetContext() will wait until there's a request
             while (true)
-                requestQueue.Add(listener.GetContext());
+            {
+                var ctx = listener.GetContext();
+                if (ctx.Request.QueryString.AllKeys.Contains("stop"))
+                    break;
+                requestQueue.Add(ctx);
+            }
+
+            requestQueue.CompleteAdding();
+            Console.WriteLine("Producer stopped");
 
             // Note: If you specify a capacity to the BlockingCollection,
             // the Add() method will block until it can add the item.
@@ -41,18 +58,42 @@ namespace Snippets.TimeWebServer
             // if the item couldn't be added
         }
 
+        // See Consumer2 for a more convenient way of consuming
         private static void Consumer(BlockingCollection<HttpListenerContext> requestQueue)
         {
-            while (true)
+            try
             {
-                // requestQueue.Take() will wait until there's something
-                var ctx = requestQueue.Take();
+                while (true)
+                {
+                    // requestQueue.Take() will wait until there's something
+                    var ctx = requestQueue.Take();
+                    Console.WriteLine(ctx.Request.Url);
+                    Thread.Sleep(5000);
+
+                    using (var writer = new StreamWriter(ctx.Response.OutputStream))
+                        writer.WriteLine(DateTime.Now);
+                }
+            }
+            // This exception is thrown when .CompleteAdding() is called on BlockingCollection
+            catch (InvalidOperationException)
+            { }
+
+            Console.WriteLine($"{Task.CurrentId}: Stopped");
+        }
+
+        private static void Consumer2(BlockingCollection<HttpListenerContext> requestQueue)
+        {
+            // The foreach blocks until an item can be taken from the BlockingCollection
+            foreach (var ctx in requestQueue.GetConsumingEnumerable())
+            {
                 Console.WriteLine(ctx.Request.Url);
                 Thread.Sleep(5000);
 
                 using (var writer = new StreamWriter(ctx.Response.OutputStream))
                     writer.WriteLine(DateTime.Now);
             }
+
+            Console.WriteLine($"{Task.CurrentId}: Stopped");
         }
     }
 }
