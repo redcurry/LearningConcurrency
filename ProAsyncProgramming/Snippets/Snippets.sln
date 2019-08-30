@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippets.ConsoleTest", "Sni
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippets.TimeWebServer", "Snippets.TimeWebServer\Snippets.TimeWebServer.csproj", "{B424D266-81D7-4196-AB32-5364A7EDF934}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippet.TestWhenAny", "Snippet.TestWhenAny\Snippet.TestWhenAny.csproj", "{1B5E7339-AFE0-4D9F-8CF9-6620870B290C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{B424D266-81D7-4196-AB32-5364A7EDF934}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B424D266-81D7-4196-AB32-5364A7EDF934}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B424D266-81D7-4196-AB32-5364A7EDF934}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B5E7339-AFE0-4D9F-8CF9-6620870B290C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B5E7339-AFE0-4D9F-8CF9-6620870B290C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B5E7339-AFE0-4D9F-8CF9-6620870B290C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B5E7339-AFE0-4D9F-8CF9-6620870B290C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
